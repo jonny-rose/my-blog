@@ -1,0 +1,22 @@
+<%- include("partials/header") %> 
+
+<h1>Home</h1>
+
+<p> <%= homeStartingContent %> </p>
+
+<% function truncateString(str, num) { 
+    if (str.length > num) { 
+        return str.slice(0, num) + "..."; 
+    } else { 
+        return str; 
+    } 
+ } %>
+
+<% posts.forEach((post) => { %> 
+    <div>
+        <h2><a href="/posts/<%= post.title %>"> <%= post.title %> </a></h2> 
+        <p> <%= truncateString(post.content, 100) %> <a href="/posts/<%= post.title %>">Read More</a></p>
+   </div>
+<% }) %>
+
+<%- include("partials/footer") %> 
