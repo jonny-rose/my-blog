@@ -14,8 +14,8 @@
 
 <% posts.forEach((post) => { %> 
     <div>
-        <h2><a href="/posts/<%= post.title %>"> <%= post.title %> </a></h2> 
-        <p> <%= truncateString(post.content, 100) %> <a href="/posts/<%= post.title %>">Read More</a></p>
+        <h2><a href="/posts/<%= post._id %>"> <%= post.title %> </a></h2> 
+        <p> <%= truncateString(post.content, 100) %> <a href="/posts/<%= post._id %>">Read More</a></p>
    </div>
 <% }) %>
 
